@@ -2,6 +2,10 @@
 <html lang="UTF-8">
 <head>
     <style>
+        @font-face {
+            font-family: 'katuri';
+            src: url("font/KATURI.TTF");
+        }
         body{
             margin:0;
         }
@@ -13,13 +17,19 @@
             background: darkgrey;
         }
         .titlecontainer{
+            line-height: calc(10vh);
             margin: 3px;
             border: 2px solid black;
             width:  calc(100vw - 10px);
-            height: calc(10vh - 18px);
+            height: calc(10vh);
             background: blue;
-            background-image: url(img/chigusa.png);
-            background-size: contain;
+            background-size: cover;
+            vertical-align: bottom;
+            text-align: center;
+            font-family: "katuri";
+            font-size: calc(7vh);
+            color: #e00a89;
+            text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
         }
     </style>
     <meta charset="UTF-8">
@@ -30,8 +40,8 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <p class="titlecontainer" >내용</p>
+    <p class="titlecontainer" style="background-image: url(img/menu_bg.png);" >전국 챤 지도</p>
     <div id="map" class="mapcontainer"></div>
-    pripara map 만드는중 - kreamsoup
+    <p class="titlecontainer" style="background-image: url(img/deruderu.png); height: calc(10vh);" >개발중!</p>
 </body>
 </html>

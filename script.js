@@ -1,7 +1,7 @@
 var HOME_PATH = window.HOME_PATH || '.';
 var MARKER_ICON_URL = HOME_PATH+'./img/chigusa-kusa.png';
 
-var position= new naver.maps.LatLng(35.17982543369992, 129.07499499992576);
+var position= new naver.maps.LatLng(37.529503938486904, 126.96554486929178);
 
 var map = new naver.maps.Map('map',{
     center: position,
