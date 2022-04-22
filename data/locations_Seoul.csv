@@ -1,5 +1,3 @@
-Name,Lat,Lag,Memo
-용산,12,23,
-노원,233,421,
-근처,211,233,
-이런식으로넣으면됨,123,456,메모
+Name,Address,Lat,Lag,Memo,Address_old
+이름(string),도로명주소(string),위도(float),경도(float),메모(string),구 지번주소(string)
+아이파크몰,서울 용산구 한강대로23길 55,12,23,그 용산,한강로3가 40-999
