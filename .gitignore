@@ -1,2 +1,5 @@
 ### ignore vscode settings files ###
 /.vscode
+
+### api key, private informations, security ###
+local.properites
