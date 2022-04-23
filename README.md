@@ -11,7 +11,8 @@ Korea Prichan Arcade Map
 
 
 > ## To do list
-> + update locations as locations_{City}.cvs
+> + update locations   
+>   - *locations_{City}_addressonly.csv* -> convert to *locations.js* by *csvtojson.py*
 >   - City : 서울, 경기, 인천 ...   
 >   - [공식홈페이지](https://www.pri-ch.com/pages/설치장소)   
 > + connect .cvs to "script.js"-{markers[]}   
@@ -20,13 +21,22 @@ Korea Prichan Arcade Map
    
 > ## Location update plan
 > 
-> - [ ] 서울   
-> - [ ] 인천   
+> - [x] 서울   
+> - [x] 인천   
 > - [ ] 경기   
 > - [ ] 부산   
->   
+> - [ ] 세종   
+> - [ ] 대전   
+> - [ ] 대구   
+> - [ ] 울산   
+> - [ ] 광주   
+> - [ ] 제주   
 > 아래 지역은 아직 미정. 혹시 요청이 있으면 추가예정   
-> :thought_balloon: 충남 세종 충북 강원 전북 대전 대구 울산 광주 경남 전남 제주   
+> :thought_balloon: 충남 충북 강원 전북 경남 전남
+>
+> [주소 데이터베이스 링크](https://docs.google.com/spreadsheets/d/1ykRN37NTBEiTTfkTME0LTriJMuhhCFsEMg6a7qgxebo/edit?usp=sharing)   
+> 원한다면 도움을..:heart:   
+
    
 ---
 학교 프로젝트가 안끝나서 손 못대는중ㅠㅠ
