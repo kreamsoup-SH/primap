@@ -60,7 +60,13 @@ async function looping(){
                         map: map, // 마커를 표시할 지도
                         position: coords, // 마커를 표시할 위치
                         title : "testing", // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                        clickable: true,
                         // image : markerImage // 마커 이미지
+                    });
+                    kakao.maps.event.addListener(marker, 'click', function() {
+                            console.log(result[0].road_address)
+                            var hyperlink="https://map.kakao.com/link/search/"+result[0].road_address.address_name
+                            window.open(hyperlink);
                     });
                     markers[i]=marker
                     marker.setMap(map)
