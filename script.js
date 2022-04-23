@@ -1,142 +1,78 @@
-// gecoding API사용하여 locations csv파일내의 주소들의 위도,경도를 naver.maps.LatLng()로변환
-// 변환된 위도,경도정보를 markers[]에 입력
-
-headers = {
-    "X-NCP-APIGW-API-KEY-ID" : "jtecemo209",
-    "X-NCP-APIGW-API-KEY" : "PMD8dKwSjRZuvp51UgzHJfiHCP6tSxVCrUXyP9JK"
-}
-// $.ajax({
-//     url: './data/locations_Seoul.csv',
-//     dataType: 'text',
-// }).done(csvToJson)
-// function csvToJson(csv_string){
-//     const rows = csv_string.split(/\r?\n|\r/);
-//     const jsonArray = [];
-//     const header = rows[0].split(",");
-//     for(let i = 1; i< rows.length; i++){
-//         let obj = {};
-//         let row = rows[i].split(",");
-//         for(let j=0; j<header.length; j++){
-//             obj[header[j]] = row[j];
-//         }
-//         jsonArray.push(obj);
-//     }
-// }
-
-var markers = [];
-var position_arr = [[1,2],[3,4]];
-
-console.log("before position_arr : ",position_arr)
-var sample = "서울 용산구 한강대로23길 55"
-AddressToCoordinate(sample)
-console.log("!!!!")
-console.log("after position_arr : ",position_arr)
-
-var sample2 = "서울 노원구 공릉로 232"
-AddressToCoordinate(sample2)
-console.log("22!!!!")
-console.log("22after position_arr : ",position_arr)
-
-function AddressToCoordinate(address) {
-    naver.maps.Service.geocode( {query: address}, callbackf(status, response, adtoco ))
-}
-function callbackf(status, response, parafunc){
-    // 에러 처리 코드
-    if (status === naver.maps.Service.Status.ERROR) {
-        if (!address) {
-            console.log("Geocode Error, Please check address");
-            return -1;
-        }
-        console.log("Geocode Error, address:" + address[2]);
-        return -1;
-    }
-    if (response.v2.meta.totalCount === 0) {
-        console.log("No result ");
-        return -2;
-    }
-    // 정상적 결과 발생시 아래코드실행
-    var item=response.v2.addresses
-    pos = [ item[0].y , item[0].x ]
-    parafunc(pos)
-}
-function adtoco(items){
-    position_arr.push(items)
-}
-
-
-
-
-/////////
-
-/// 기본 init ///
-
-// 마커아이콘을 불러오기
-var HOME_PATH = window.HOME_PATH || '.';
-var MARKER_ICON_URL = HOME_PATH+'./img/chigusa-kusa.png';
-
-// 용산을 메인포지션으로 지정
-var position_main = new naver.maps.LatLng(37.529503938486904, 126.96554486929178);
-
-var map = new naver.maps.Map('map',{
-    center: position_main,
-    zoom: 17
-});
-
-console.log("33after position_arr : ",position_arr[3])
-
-// 마커를 추가. markers[]에서 불러온다.
-// for (var i in markers){
-// }
-
-var markerOptions={
-    position: position_main.destinationPoint(0,20),
-    map: map,
-    icon: {
-        url: MARKER_ICON_URL,
-        size: new naver.maps.Size(50,52),
-        origin: new naver.maps.Point(0,0),
-        anchor: new naver.maps.Point(25,26)
-    }
+// 지도 표시
+var container = document.getElementById('map');
+var options = {
+    center: new kakao.maps.LatLng(37.529503938486904,126.96554486929178),   //기본위치는 용산
+    level: 7    //지도의 확대축소 레벨
 };
 
+// //지도 생성 및 객체 리턴
+var map = new kakao.maps.Map(container, options);
 
-/// 지도에 보이는 마커만 표시하는 기능 ///
-var bounds = map.getBounds();
-var southWest = bounds.getSW();
-var northEast = bounds.getNE();
-var lngSpan = northEast.lng() - southWest.lng();
-var latSpan = northEast.lat() - southWest.lat();
+// // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
+// var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+//     iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
 
-naver.maps.Event.addListener(map, 'idle', function() {
-    updateMarkers(map, markers);
-});
+// // 인포윈도우를 생성합니다
+// var infowindow = new kakao.maps.InfoWindow({
+//     content : iwContent,
+//     removable : iwRemoveable
+// });
 
-function updateMarkers(map, markers) {
+// 지도 확대 축소 컨트롤. 각각의 버튼 누를시 확대,축소
 
-    var mapBounds = map.getBounds();
-    var marker, position;
+function zoomIn() {
+    map.setLevel(map.getLevel() - 1);
+}
+function zoomOut() {
+    map.setLevel(map.getLevel() + 1);
+}
 
-    for (var i = 0; i < markers.length; i++) {
+// 마커아이콘을 불러오기
+// var HOME_PATH = window.HOME_PATH || '.';
+// var MARKER_ICON_URL = HOME_PATH+'./data/img/chigusa-kusa.png';
+var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png'
+var imageSize = new kakao.maps.Size(50,52);
+var imageOption = {offset: new kakao.maps.Point(0,0)}
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
 
-        marker = markers[i]
-        position = marker.getPosition();
+// 주소-좌표 변환 객체를 생성
+var geocoder = new kakao.maps.services.Geocoder();
+var LatLngArr=[]
+var count=0
+var markers=[]
+// 주소로 좌표를 찾아 LatLngArr에 위치정보 입력
 
-        if (mapBounds.hasLatLng(position)) {
-            showMarker(map, marker);
-        } else {
-            hideMarker(map, marker);
+console.log("start")
+
+async function looping(){
+    for (var i = 0; i < locations.length; i++){
+        console.log("for start")
+        function fori(i)
+        {
+            console.log("i = ",i)
+            console.log(locations[i].address+"\n\n")
+            geocoder.addressSearch(locations[i].address, function(result, status){
+                if (status === kakao.maps.services.Status.OK) {
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x)
+                    console.log("inner i = ",i)
+                    console.log("y,x = ",result[0].y, result[0].x)
+                    var marker = new kakao.maps.Marker({
+                        map: map, // 마커를 표시할 지도
+                        position: coords, // 마커를 표시할 위치
+                        title : "testing", // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                        // image : markerImage // 마커 이미지
+                    });
+                    markers[i]=marker
+                    marker.setMap(map)
+                }
+            })
         }
+        fori(i)
     }
 }
+function main(){
+looping()
+console.log("--------------------\nfinal markers=",markers)
 
-function showMarker(map, marker) {
-
-    if (marker.getMap()) return;
-    marker.setMap(map);
 }
-
-function hideMarker(map, marker) {
-
-    if (!marker.getMap()) return;
-    marker.setMap(null);
-}
+main()

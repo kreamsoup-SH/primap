@@ -1,6 +1,6 @@
 @font-face {
     font-family: "katuri";
-    src: url(./font/KATURI.TTF) format('truetype');
+    src: url(./data/font/KATURI.TTF) format('truetype');
 }
 p1{
     font-family: "katuri";
