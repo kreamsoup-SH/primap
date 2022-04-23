@@ -1,5 +1,5 @@
 ### ignore vscode settings files ###
 /.vscode
 
-### api key, private informations, security ###
-/apikeys.js
+## apikeys ##
+apikeys.js
