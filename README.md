@@ -20,8 +20,11 @@ contact : <alexalex225225@icloud.com>
 
 
 내용물은 대충 이렇게 생김   
-![cap1](https://user-images.githubusercontent.com/60608787/164894286-f1906aa2-69b9-435a-9c44-d27170e15355.png)
-![cap3](https://user-images.githubusercontent.com/60608787/164894287-4e2121e6-de40-401f-b63e-035656f8c14a.png)
+
+<img src="https://user-images.githubusercontent.com/60608787/164986175-b1d2c23b-5369-4147-9bf7-d9c802e6f823.png" width="70%">
+
+
+
 
    
 공식홈페이지의 설치장소 리스트에는 위치들의 이름과 네이버지도 링크만이 적혀있기에 위치를 한눈에 보기 어렵습니다.   
@@ -59,6 +62,7 @@ contact : <alexalex225225@icloud.com>
 > 아래 지역은 아직 미정. 혹시 요청이 있으면 추가예정   
 > :thought_balloon: 충남 충북 강원 전북 경남 전남
 >
+> [프리채널 공식홈페이지-설치장소](https://www.pri-ch.com/pages/설치장소)
 > [주소 데이터베이스 링크](https://docs.google.com/spreadsheets/d/1ykRN37NTBEiTTfkTME0LTriJMuhhCFsEMg6a7qgxebo/edit?usp=sharing)   
 > 원한다면 도움을..:heart:   
 
