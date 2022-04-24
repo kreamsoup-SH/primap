@@ -42,20 +42,20 @@ var count=0
 var markers=[]
 // 주소로 좌표를 찾아 LatLngArr에 위치정보 입력
 
-console.log("start")
+// console.log("start")
 
 async function looping(){
     for (var i = 0; i < locations.length; i++){
-        console.log("for start")
+        // console.log("for start")
         function fori(i)
         {
-            console.log("i = ",i)
-            console.log(locations[i].address+"\n\n")
+            // console.log("i = ",i)
+            // console.log(locations[i].address+"\n\n")
             geocoder.addressSearch(locations[i].address, function(result, status){
                 if (status === kakao.maps.services.Status.OK) {
                     var coords = new kakao.maps.LatLng(result[0].y, result[0].x)
-                    console.log("inner i = ",i)
-                    console.log("y,x = ",result[0].y, result[0].x)
+                    // console.log("inner i = ",i)
+                    // console.log("y,x = ",result[0].y, result[0].x)
                     var marker = new kakao.maps.Marker({
                         map: map, // 마커를 표시할 지도
                         position: coords, // 마커를 표시할 위치
@@ -64,7 +64,7 @@ async function looping(){
                         // image : markerImage // 마커 이미지
                     });
                     kakao.maps.event.addListener(marker, 'click', function() {
-                            console.log(result[0].road_address)
+                            // console.log(result[0].road_address)
                             var hyperlink="https://map.kakao.com/link/search/"+result[0].road_address.address_name
                             window.open(hyperlink);
                     });
@@ -79,6 +79,8 @@ async function looping(){
 
 function main(){
 looping()
-console.log("--------------------\nfinal markers=",markers)
+// console.log("--------------------\nfinal markers=",markers)
 }
 main()
+
+// 비동기에 뇌가 녹는다...
