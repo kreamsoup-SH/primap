@@ -1,17 +1,23 @@
 import csv
 import json
 
-seoul = "locations_Seoul_addressonly"
-incheon = "locations_Incheon_addressonly"
-gyeonggi = "locations_Gyeonggi_addressonly"
-busan = "locations_Busan_addressonly"
+seoul =     "Seoul"
+incheon =   "Incheon"
+gyeonggi =  "Gyeonggi"
+busan =     "Busan"
+sejong =    "Sejong"
+daejeon =   "Daejeon"
+daegu =     "Daegu"
+ulsan =     "Ulsan"
+gwangju =   "Gwangju"
+jeju =      "Jeju"
 
-filenames=[seoul,incheon,gyeonggi,busan]
+filenames=[seoul,incheon,gyeonggi,busan,sejong,daejeon,daegu,ulsan,gwangju,jeju]
 
 jsfile = open('./locations.js','w',encoding="UTF-8")
 jsfile.write("var locations = [\n")
 for i, filename in enumerate(filenames):
-    csvfile = open("./data/csv/addressonly/"+filename+".csv", 'r', encoding="UTF-8")
+    csvfile = open("./data/csv/addressonly/locations_"+filename+"_addressonly.csv", 'r', encoding="UTF-8")
     for i, line in enumerate(csvfile):
         jsfile.write("\t{\n\t\t\"address\" : \""+line.strip()+"\",\n")
         jsfile.write("\t},\n")
