@@ -3,20 +3,23 @@ PRIMAP
 Korea Prichan Arcade Map
 ---
    
-## :bulb:사용법:bulb:
-:point_right::point_right: [<PRIMAP홈페이지로>](https://kreamsoup-sh.github.io/primap/) :point_left::point_left:   
+### 시한부인생 프리채널 아케이드챤의 위치를 나타내주는 지도입니다.
+### 1.02버전 현재 서울, 인천 지역의 위치정보만 반영된 상태입니다.
+   
+## :point_right::point_right: [<PRIMAP홈페이지로>](https://kreamsoup-sh.github.io/primap/) :point_left::point_left:   
+:bulb: 사용법 :bulb:
 - 위 페이지주소로 접속후 지도 이용.   
 - 마커를 클릭시 해당 주소가 카카오맵으로 열림   
-   
+- [공식홈페이지](https://www.pri-ch.com/pages/설치장소)의 리스트가 기반이기에 **실제 상황과 다른 정보가 있을수있습니다.**   
+- **!!!실제 상황과 다른 정보가 있을수있습니다.!!!**   
       
-시한부인생 프리채널 아케이드챤의 위치를 나타내주는 지도입니다.
-1.01버전 현재 서울, 인천 지역의 위치정보만 반영된 상태입니다.   
-[공식홈페이지](https://www.pri-ch.com/pages/설치장소)를 기반으로 작성하였기때문에 실제 상황과 맞지 않은 정보가 있을수있습니다.   
-댓글이나 메일로 제보 해주시면 감사하겠습니다.   
+시한부인생 프리채널 아케이드챤의 위치를 나타내주는 지도입니다.   
+1.02버전 현재 서울, 인천 지역의 위치정보만 반영된 상태입니다.   
+잘못된 정보나 누락된 정보는 댓글이나 메일로 제보 해주시면 감사하겠습니다.   
 contact : <alexalex225225@icloud.com>
 
 
-
+내용물은 대충 이렇게 생김   
 ![cap1](https://user-images.githubusercontent.com/60608787/164894286-f1906aa2-69b9-435a-9c44-d27170e15355.png)
 ![cap3](https://user-images.githubusercontent.com/60608787/164894287-4e2121e6-de40-401f-b63e-035656f8c14a.png)
 
@@ -30,11 +33,14 @@ contact : <alexalex225225@icloud.com>
 ---
 
 > ## To do list
-> + update locations   
->   - *locations_{City}_addressonly.csv* -> convert to *locations.js* by *csvtojson.py*
->   - City : 서울, 경기, 인천 ...   
->   - [공식홈페이지](https://www.pri-ch.com/pages/설치장소)   
-> + connect .cvs to "script.js"-{markers[]}   
+> + ~~update locations~~   
+>   - ~~*locations_{City}_addressonly.csv* -> convert to *locations.js* by *csvtojson.py*~~
+>   - ~~City : 서울, 경기, 인천 ...~~   
+>   - ~~[공식홈페이지](https://www.pri-ch.com/pages/설치장소)~~   
+> + ~~connect .cvs to "script.js"-{markers[]}~~   
+> + update location data (below-listed)   
+> + security update (hide key)   
+> + reconstruct js code so as to make map lighter   
 > ...
    
    
@@ -57,6 +63,11 @@ contact : <alexalex225225@icloud.com>
 > 원한다면 도움을..:heart:   
 
    
+---
+> 업데이트 기록
+> ver.1.01 서울, 인천 위치 데이터만으로 첫 게시
+> ver.1.02 경기, 부산 위치 데이터 추가
+
 ---
 학교 프로젝트가 안끝나서 손 많이 못대는중ㅠㅠ
 
