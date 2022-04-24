@@ -41,6 +41,7 @@ contact : <alexalex225225@icloud.com>
 >   - ~~*locations_{City}_addressonly.csv* -> convert to *locations.js* by *csvtojson.py*~~
 >   - ~~City : 서울, 경기, 인천 ...~~     
 > + ~~connect .cvs to "script.js"-{markers[]}~~   
+> + add "find my position"
 > + update unsupported location data    
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
