@@ -62,7 +62,7 @@ contact : <alexalex225225@icloud.com>
 > :thought_balloon: 충남 충북 강원 전북 경남 전남
 >
 > [프리채널 공식홈페이지-설치장소](https://www.pri-ch.com/pages/설치장소)
-> [주소 데이터베이스 링크](https://docs.google.com/spreadsheets/d/1ykRN37NTBEiTTfkTME0LTriJMuhhCFsEMg6a7qgxebo/edit?usp=sharing)   
+> [설치장소리스트 구글시트](https://docs.google.com/spreadsheets/d/1ykRN37NTBEiTTfkTME0LTriJMuhhCFsEMg6a7qgxebo/edit?usp=sharing)   
 > 원한다면 도움을..:heart:   
 
    
