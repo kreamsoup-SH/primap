@@ -3,9 +3,10 @@ PRIMAP
 Korea Prichan Arcade Map
 ---
    
-## 사용법
-:point_right: 페이지주소로 접속후 지도 이용.   
-:point_right: 마커를 클릭시 해당 주소가 카카오맵으로 열림   
+## :bulb:사용법:bulb:
+:point_right::point_right: [<PRIMAP홈페이지로>](https://kreamsoup-sh.github.io/primap/) :point_left::point_left:   
+- 위 페이지주소로 접속후 지도 이용.   
+- 마커를 클릭시 해당 주소가 카카오맵으로 열림   
    
       
 시한부인생 프리채널 아케이드챤의 위치를 나타내주는 지도입니다.
@@ -41,8 +42,8 @@ contact : <alexalex225225@icloud.com>
 > 
 > - [x] 서울   
 > - [x] 인천   
-> - [ ] 경기   
-> - [ ] 부산   
+> - [x] 경기   
+> - [x] 부산   
 > - [ ] 세종   
 > - [ ] 대전   
 > - [ ] 대구   
