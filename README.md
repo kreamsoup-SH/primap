@@ -4,7 +4,7 @@ Korea Prichan Arcade Map
 ---
    
 ### 시한부인생 프리채널 아케이드챤의 위치를 나타내주는 지도입니다.
-### 1.02버전 현재 서울, 인천 지역의 위치정보만 반영된 상태입니다.
+### 1.02버전 현재 서울, 인천, 경기, 부산 지역의 위치정보만 반영된 상태입니다.
    
 ## :point_right::point_right: [<PRIMAP홈페이지로>](https://kreamsoup-sh.github.io/primap/) :point_left::point_left:   
 :bulb: 사용법 :bulb:
