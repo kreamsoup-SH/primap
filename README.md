@@ -42,7 +42,7 @@ contact : <alexalex225225@icloud.com>
 >   - ~~City : 서울, 경기, 인천 ...~~   
 >   - ~~[공식홈페이지](https://www.pri-ch.com/pages/설치장소)~~   
 > + ~~connect .cvs to "script.js"-{markers[]}~~   
-> + update location data (below-listed)   
+> + update unsupported location data    
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
 > + make page more **pretty**
