@@ -41,15 +41,14 @@ contact : <alexalex225225@icloud.com>
 >   - ~~*locations_{City}_addressonly.csv* -> convert to *locations.js* by *csvtojson.py*~~
 >   - ~~City : 서울, 경기, 인천 ...~~     
 > + ~~connect .cvs to "script.js"-{markers[]}~~  
-> + **change api 要請方式**   
+> + **change API 要請方式**   
 > + add "find my position"
 > + update unsupported location data    
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
 > + make page more **pretty**
->    
-> ...
-   
+> ...   
+> 데이터를 로컬에 저장시
    
 ---
 > 업데이트 기록   
