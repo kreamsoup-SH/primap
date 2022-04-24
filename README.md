@@ -48,7 +48,7 @@ contact : <alexalex225225@icloud.com>
 > + reconstruct js code so as to make map lighter   
 > + make page more **pretty**
 > ...   
-> 데이터를 로컬에 저장시
+> 위치 데이터(주소,좌표,.etc)를 로컬에 저장시켜야할듯.   
    
 ---
 > 업데이트 기록   
