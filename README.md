@@ -42,6 +42,7 @@ contact : <alexalex225225@icloud.com>
 > + update location data (below-listed)   
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
+> + make page more **pretty**
 > ...
    
    
