@@ -6,7 +6,7 @@ incheon = "locations_Incheon_addressonly"
 gyeonggi = "locations_Gyeonggi_addressonly"
 busan = "locations_Busan_addressonly"
 
-filenames=[seoul,incheon]
+filenames=[seoul,incheon,gyeonggi,busan]
 
 jsfile = open('./locations.js','w',encoding="UTF-8")
 jsfile.write("var locations = [\n")
@@ -17,5 +17,4 @@ for i, filename in enumerate(filenames):
         jsfile.write("\t},\n")
     csvfile.close()
 jsfile.write("]")
-
 jsfile.close()
