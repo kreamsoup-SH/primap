@@ -39,8 +39,7 @@ contact : <alexalex225225@icloud.com>
 > ## To do list
 > + ~~update locations~~   
 >   - ~~*locations_{City}_addressonly.csv* -> convert to *locations.js* by *csvtojson.py*~~
->   - ~~City : 서울, 경기, 인천 ...~~   
->   - ~~[공식홈페이지](https://www.pri-ch.com/pages/설치장소)~~   
+>   - ~~City : 서울, 경기, 인천 ...~~     
 > + ~~connect .cvs to "script.js"-{markers[]}~~   
 > + update unsupported location data    
 > + security update (hide key)   
