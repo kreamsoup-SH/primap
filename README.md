@@ -5,7 +5,8 @@ Korea Prichan Arcade Map
    
 ### 시한부인생 프리채널 아케이드의 위치를 나타내주는 지도입니다.
 ### 1.03버전 반영된 지역은 아래를 참조해주세요.
-### 현재 작동방식 설계에 문제가 있습니다. 무의미한 새로고침을 자제해주세요.
+### 현재 작동방식 설계에 문제가 있습니다.   
+### API요청수가 한도에 다다르면 페이지가 작동하지 않을수있습니다.   
    
 ## :point_right: [<PRIMAP홈페이지로>](https://kreamsoup-sh.github.io/primap/) :point_left:   
 :bulb: 사용법 :bulb:
