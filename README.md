@@ -46,6 +46,7 @@ contact : <alexalex225225@icloud.com>
 > + ~~update unsupported location data~~    
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
+> + make user comment page. This may help update prichan-informations.   
 > + make page more **pretty**
 > ...   
 > ~~위치 데이터(주소,좌표,.etc)를 로컬에 저장시켜야할듯.<-이용약관 위반인지 확인해야함~~   
