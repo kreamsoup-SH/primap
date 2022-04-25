@@ -41,21 +41,22 @@ contact : <alexalex225225@icloud.com>
 >   - ~~*locations_{City}_addressonly.csv* -> convert to *locations.js* by *csvtojson.py*~~
 >   - ~~City : 서울, 경기, 인천 ...~~     
 > + ~~connect .cvs to "script.js"-{markers[]}~~  
-> + **change API 要請方式**   
+> + ~~**change API 要請方式**~~   
 > + add "find my position"
 > + update unsupported location data    
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
 > + make page more **pretty**
 > ...   
-> 위치 데이터(주소,좌표,.etc)를 로컬에 저장시켜야할듯.<-이용약관 위반인지 확인해야함   
+> ~~위치 데이터(주소,좌표,.etc)를 로컬에 저장시켜야할듯.<-이용약관 위반인지 확인해야함~~   
+> DB저장불가능...ㅠㅠ   
    
 ---
 > 업데이트 기록   
 > ver.1.01 서울, 인천 위치 데이터만으로 첫 게시   
 > ver.1.02 경기, 부산 위치 데이터 추가   
 > ver.1.03 세종, 대전, 대구, 울산, 광주, 제주 위치데이터 추가
-
+   
 ---
 학교 프로젝트가 안끝나서 손 많이 못대는중ㅠㅠ   
 아무튼 내가 보려고 만드는 프리챤 지도다조   
