@@ -4,7 +4,7 @@ Korea Prichan Arcade Map
 ---
    
 ### 시한부인생 프리채널 아케이드의 위치를 나타내주는 지도입니다.
-### 1.03버전 반영된 지역은 아래를 참조해주세요.
+### 1.10버전 프리채널 홈페이지 위치정보 모두 반영됨
    
 ## :point_right: [<PRIMAP홈페이지로>](https://kreamsoup-sh.github.io/primap/) :point_left:   
 :bulb: 사용법 :bulb:
@@ -15,17 +15,17 @@ Korea Prichan Arcade Map
 - **!!!실제 상황과 다른 정보가 있을수있습니다.!!!**   
       
 > ## 지원 지역 목록   
-> - :o: 서울, 인천, 경기, 부산, 세종, 대전, 대구, 울산, 광주, 제주   
-> - :x: 충남 충북 강원 전북 경남 전남   
+> - :o: 서울, 인천, 경기, 부산, 세종, 대전, 대구, 울산, 광주, 제주, 충남, 충북, 강원, 전북, 경남, 전남   
+> - :x: x   
 >   
 > [프리채널 공식홈페이지-설치장소](https://www.pri-ch.com/pages/설치장소)   
 > [설치장소리스트 구글시트](https://docs.google.com/spreadsheets/d/1ykRN37NTBEiTTfkTME0LTriJMuhhCFsEMg6a7qgxebo/edit?usp=sharing)   
-> 이거 은근히 빨리하는것같기도 하고 아닌것같기도하고...   
-> ![icon_16](https://user-images.githubusercontent.com/60608787/164990278-6bd265f7-3c3a-47ca-b766-5517e86d5af1.png)
-
-
+> 
+> 위치정보 안나오는게 자주있습니다.. 공식홈페이지 정보가 업데이트되고있지 않은것같습니다.   
+> ![icon_16](https://user-images.githubusercontent.com/60608787/164990278-6bd265f7-3c3a-47ca-b766-5517e86d5af1.png)   
+   
 잘못된 정보,누락된 정보 수정요청은 댓글이나 메일로 연락   
-contact : <alexalex225225@icloud.com>
+contact : <alexalex225225@icloud.com>   
 
 
 내용물은 대충 이렇게 생김   
@@ -43,19 +43,22 @@ contact : <alexalex225225@icloud.com>
 > + ~~connect .cvs to "script.js"-{markers[]}~~  
 > + ~~**change API 要請方式**~~   
 > + add "find my position"
-> + update unsupported location data    
+> + ~~update unsupported location data~~    
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
 > + make page more **pretty**
 > ...   
 > ~~위치 데이터(주소,좌표,.etc)를 로컬에 저장시켜야할듯.<-이용약관 위반인지 확인해야함~~   
-> DB저장불가능...ㅠㅠ   
+> DB저장불가능...ㅠㅠ 현재(ver.1.10)보다 나은 방식이 없나 찾는중.   
+> ![icon_16](https://user-images.githubusercontent.com/60608787/164990278-6bd265f7-3c3a-47ca-b766-5517e86d5af1.png)   
+   
    
 ---
 > 업데이트 기록   
 > ver.1.01 서울, 인천 위치 데이터만으로 첫 게시   
 > ver.1.02 경기, 부산 위치 데이터 추가   
 > ver.1.03 세종, 대전, 대구, 울산, 광주, 제주 위치데이터 추가
+> ver.1.10 충남, 충북, 강원, 전북, 경남, 전남 위치데이터 추가 (전국의 위치정보 추가완료)   
    
 ---
 학교 프로젝트가 안끝나서 손 많이 못대는중ㅠㅠ   
