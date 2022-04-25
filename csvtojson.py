@@ -11,8 +11,15 @@ daegu =     "Daegu"
 ulsan =     "Ulsan"
 gwangju =   "Gwangju"
 jeju =      "Jeju"
+chungnam =  "Chungnam"
+chungbuk =  "Chungbuk"
+gangwon =   "Gangwon"
+jeonbuk =   "Jeonbuk"
+gyeongnam = "Gyeongnam"
+jeonnam =   "Jeonnam"
 
-filenames=[seoul,incheon,gyeonggi,busan,sejong,daejeon,daegu,ulsan,gwangju,jeju]
+filenames=[ seoul,incheon,gyeonggi,busan,sejong,daejeon,daegu,ulsan,gwangju,jeju,
+            chungnam,chungbuk,gangwon,jeonbuk,gyeongnam,jeonnam]
 
 jsfile = open('./locations.js','w',encoding="UTF-8")
 jsfile.write("var locations = [\n")
