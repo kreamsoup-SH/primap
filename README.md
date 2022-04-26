@@ -30,7 +30,8 @@ contact : <alexalex225225@icloud.com>
 
 내용물은 대충 이렇게 생김   
 
-<img src="https://user-images.githubusercontent.com/60608787/164986175-b1d2c23b-5369-4147-9bf7-d9c802e6f823.png" width="70%">
+<img src="https://user-images.githubusercontent.com/60608787/164986175-b1d2c23b-5369-4147-9bf7-d9c802e6f823.png" width="70%">   
+**구버전(ver 1.10과 그 이전) 설명사진. 모양 이렇게 생겼다 정도만 침고..**   
    
    
    
