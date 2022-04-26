@@ -51,7 +51,7 @@ locations.forEach(function(address){
                 clickable : true,
                 // image : markerImage
             })
-            var iwContent = '<span class="a">'+result[0].address.address_name+'   '+'</span>'
+            var iwContent = '<span class="a"><a href="https://map.kakao.com/link/search/'+result[0].address.address_name+'">주소이동</a>'+'</span>'
             var iwRemoveable = true
             var infowindow = new kakao.maps.InfoWindow({
                 content : iwContent,
