@@ -8,23 +8,17 @@ var options = {
 // //지도 생성 및 객체 리턴
 var map = new kakao.maps.Map(container, options);
 
-// // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
-// var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-//     iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
-
-// // 인포윈도우를 생성합니다
-// var infowindow = new kakao.maps.InfoWindow({
-//     content : iwContent,
-//     removable : iwRemoveable
-// });
-
 // 지도 확대 축소 컨트롤. 각각의 버튼 누를시 확대,축소
-
 function zoomIn() {
     map.setLevel(map.getLevel() - 1);
 }
 function zoomOut() {
     map.setLevel(map.getLevel() + 1);
+}
+
+// 오버레이 닫기 함수
+function closeOverlay() {
+    overlay.setMap(null);     
 }
 
 // 마커아이콘을 불러오기
@@ -37,50 +31,54 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
 
 // 주소-좌표 변환 객체를 생성
 var geocoder = new kakao.maps.services.Geocoder();
-var LatLngArr=[]
-var count=0
+var LatLngObj= {}
+var counter=0
 var markers=[]
-// 주소로 좌표를 찾아 LatLngArr에 위치정보 입력
+// var locations [ "주소1", "주소2", ... ] in locations.js
+// 주소로 좌표를 찾아 LatLngArr에 좌표정보 입력
 
-// console.log("start")
-
-async function looping(){
-    for (var i = 0; i < locations.length; i++){
-        // console.log("for start")
-        function fori(i)
-        {
-            // console.log("i = ",i)
-            // console.log(locations[i].address+"\n\n")
-            geocoder.addressSearch(locations[i].address, function(result, status){
-                if (status === kakao.maps.services.Status.OK) {
-                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x)
-                    // console.log("inner i = ",i)
-                    // console.log("y,x = ",result[0].y, result[0].x)
-                    var marker = new kakao.maps.Marker({
-                        map: map, // 마커를 표시할 지도
-                        position: coords, // 마커를 표시할 위치
-                        title : result[0].road_address.address_name, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-                        clickable: true,
-                        // image : markerImage // 마커 이미지
-                    });
-                    kakao.maps.event.addListener(marker, 'click', function() {
-                            // console.log(result[0].road_address)
-                            var hyperlink="https://map.kakao.com/link/search/"+result[0].road_address.address_name
-                            window.open(hyperlink);
-                    });
-                    markers[i]=marker
-                    marker.setMap(map)
-                }
+locations.forEach(function(address){
+    geocoder.addressSearch(address, function(result, status){
+        if (status === kakao.maps.services.Status.OK){
+            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+            LatLngObj[address]=coords
+            console.log("LatLngObj", LatLngObj)
+            console.log("LatLngObj[address] : " ,LatLngObj[address])
+            var marker = new kakao.maps.Marker({
+                map : map,
+                position : coords,
+                title : result[0].road_address.address_name,
+                clickable : true,
+                // image : markerImage
             })
+            var iwContent = '<span class="a">'+result[0].address.address_name+'   '+'</span>'
+            var iwRemoveable = true
+            var infowindow = new kakao.maps.InfoWindow({
+                content : iwContent,
+                removable : iwRemoveable
+            })
+            kakao.maps.event.addListener(marker, 'click', function(){
+                infowindow.close()
+                infowindow.open(map, marker)
+
+                // var hyperlink="https://map.kakao.com/link/search/"+result[0].road_address.address_name
+                // window.open(hyperlink);
+            })
+            markers.push(marker)
+            console.log("marker push : ", marker)
+            console.log("markers.length = ", markers.length)
+            console.log('\n')
         }
-        fori(i)
-    }
+        counter++
+        // console.log("counter++ : ",counter)
+        // console.log("locations.length : ",locations.length)
+        if( counter === locations.length){
+            doNext()
+        }
+    })
+})
+function doNext(){
+    console.log("donext\n")
+    console.log(LatLngObj);
+    console.log(markers)
 }
-
-function main(){
-looping()
-// console.log("--------------------\nfinal markers=",markers)
-}
-main()
-
-// 비동기에 뇌가 녹는다...
