@@ -1,5 +1,3 @@
-import csv
-
 seoul =     "Seoul"
 incheon =   "Incheon"
 gyeonggi =  "Gyeonggi"

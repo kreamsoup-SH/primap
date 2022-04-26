@@ -34,16 +34,16 @@ var geocoder = new kakao.maps.services.Geocoder();
 var LatLngObj= {}
 var counter=0
 var markers=[]
-// var locations [ "주소1", "주소2", ... ] in locations.js
+// var locations [ {"name":"이름1","address":"주소1"}, ... ] in locations.js
 // 주소로 좌표를 찾아 LatLngArr에 좌표정보 입력
 
-locations.forEach(function(address){
-    geocoder.addressSearch(address, function(result, status){
+locations.forEach(function(location){
+    geocoder.addressSearch(location.address, function(result, status){
         if (status === kakao.maps.services.Status.OK){
             var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-            LatLngObj[address]=coords
-            console.log("LatLngObj", LatLngObj)
-            console.log("LatLngObj[address] : " ,LatLngObj[address])
+            LatLngObj[location.address]=coords
+            // console.log("LatLngObj", LatLngObj)
+            // console.log("LatLngObj[address] : " ,LatLngObj[location.address])
             var marker = new kakao.maps.Marker({
                 map : map,
                 position : coords,
@@ -51,23 +51,30 @@ locations.forEach(function(address){
                 clickable : true,
                 // image : markerImage
             })
-            var iwContent = '<span class="a"><a href="https://map.kakao.com/link/search/'+result[0].address.address_name+'">주소이동</a>'+'</span>'
+            var iwContent = '<span class="a"><a href="https://map.kakao.com/link/search/'+result[0].address.address_name +'">'+location.name+'</a>'+'</span>'
             var iwRemoveable = true
             var infowindow = new kakao.maps.InfoWindow({
                 content : iwContent,
                 removable : iwRemoveable
             })
+            // 마커 클릭시 이벤트리스너 생성
             kakao.maps.event.addListener(marker, 'click', function(){
+                //이전에 존재한 인포윈도우 종료
                 infowindow.close()
+                //새로운 인포윈도우 오픈
                 infowindow.open(map, marker)
 
                 // var hyperlink="https://map.kakao.com/link/search/"+result[0].road_address.address_name
                 // window.open(hyperlink);
             })
             markers.push(marker)
-            console.log("marker push : ", marker)
-            console.log("markers.length = ", markers.length)
-            console.log('\n')
+            // console.log("marker push : ", marker)
+            // console.log("markers.length = ", markers.length)
+            // console.log('\n')
+        }
+        else{
+            console.log(location.address)
+            console.log("!kakao.maps.services.Status.OK ERROR")
         }
         counter++
         // console.log("counter++ : ",counter)
@@ -78,7 +85,7 @@ locations.forEach(function(address){
     })
 })
 function doNext(){
-    console.log("donext\n")
-    console.log(LatLngObj);
-    console.log(markers)
+    console.log("loaded completly\n")
+    // console.log(LatLngObj);
+    // console.log(markers)
 }
