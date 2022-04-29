@@ -32,7 +32,7 @@ contact : <alexalex225225@icloud.com>
 
 <img src="https://user-images.githubusercontent.com/60608787/164986175-b1d2c23b-5369-4147-9bf7-d9c802e6f823.png" width="70%">
 
-**구버전(ver 1.10과 그 이전) 설명사진입니다. 사실상 현재 기능은 별거 없으니 모양 이렇게 생겼다 정도만 침고해주세요.**
+**구버전(ver 1.10과 그 이전) 설명사진입니다. 사실상 현재 기능은 별거 없으니 모양 이렇게 생겼다 정도만 참고해주세요.**
    
    
    
