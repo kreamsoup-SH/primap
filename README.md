@@ -10,7 +10,7 @@ Korea Prichan Arcade Map
 - 위 페이지주소로 접속후 지도 이용.   
 - 마커 클릭시 해당장소의 이름이 담긴 팝업 표시됨.
 - 팝업의 장소명을 클릭시 해당 장소정보가 카카오맵으로 열림   
-- [공식홈페이지](https://www.pri-ch.com/pages/설치장소)의 리스트를 바탕으로하기에 정보가 빠르게 업데이트되기 힘듭니다.
+- [공식홈페이지](https://www.pri-ch.com/pages/설치장소)의 리스트를 바탕으로하며 [우리동네프리채널](https://blog.naver.com/PostList.naver?blogId=prichannel&from=postList&categoryNo=16)신규 포스트로 장소 데이터를 업데이트중입니다.   
 - 최대한 최신정보를 업데이트하려고는하나 **실제 상황과 다른 정보가 있을수있습니다.**   
 - **!!!실제 상황과 다른 정보가 있을수있습니다.!!!**   
       
@@ -19,6 +19,7 @@ Korea Prichan Arcade Map
 > - :x: x   
 >   
 > [프리채널 공식홈페이지-설치장소](https://www.pri-ch.com/pages/설치장소)   
+> [우리동네프리채널](https://blog.naver.com/PostList.naver?blogId=prichannel&from=postList&categoryNo=16)   
 > [설치장소리스트 구글시트](https://docs.google.com/spreadsheets/d/1ykRN37NTBEiTTfkTME0LTriJMuhhCFsEMg6a7qgxebo/edit?usp=sharing)   
 > 
 > 위치정보 안나오는게 자주있습니다.. 공식홈페이지 정보가 업데이트되고있지 않은것같습니다.   
