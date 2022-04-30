@@ -18,7 +18,7 @@ jeonnam =   "Jeonnam"
 filenames=[ seoul,incheon,gyeonggi,busan,sejong,daejeon,daegu,ulsan,gwangju,jeju,
             chungnam,chungbuk,gangwon,jeonbuk,gyeongnam,jeonnam]
 # filetemp=[gangwon]
-target=open("./data/locations.js", 'w', encoding="UTF-8")
+target=open("./locations.js", 'w', encoding="UTF-8")
 target.write("var locations = [\n")
 for i, city in enumerate(filenames):
     try:
