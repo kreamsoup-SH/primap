@@ -21,13 +21,15 @@ function closeOverlay() {
     overlay.setMap(null);     
 }
 
+// 현재위치를 저장할 배열
+var currentposition = new kakao.maps.Marker({})
+
 // 마커아이콘을 불러오기
-// var HOME_PATH = window.HOME_PATH || '.';
-// var MARKER_ICON_URL = HOME_PATH+'./data/img/chigusa-kusa.png';
+var MARKER_ICON_URL = '/data/img/userpos.png';
 var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png'
 var imageSize = new kakao.maps.Size(50,52);
-var imageOption = {offset: new kakao.maps.Point(0,0)}
-var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+var imageOption = {offset: new kakao.maps.Point(25,26)}
+var markerImage = new kakao.maps.MarkerImage(MARKER_ICON_URL, imageSize, imageOption);
 
 // 주소-좌표 변환 객체를 생성
 var geocoder = new kakao.maps.services.Geocoder();
@@ -48,10 +50,9 @@ locations.forEach(function(location){
                 map : map,
                 position : coords,
                 title : result[0].road_address.address_name,
-                clickable : true,
-                // image : markerImage
+                clickable : true
             })
-            var iwContent = '<span class="a"><a href="https://map.kakao.com/link/search/'+result[0].address.address_name +'">'+location.name+'</a>'+'</span>'
+            var iwContent = '<span class="nametag"><a href="https://map.kakao.com/link/search/'+result[0].address.address_name +'">'+location.name+'</a>'+'</div>'
             var iwRemoveable = true
             var infowindow = new kakao.maps.InfoWindow({
                 content : iwContent,
@@ -88,4 +89,39 @@ function doNext(){
     console.log("loaded completly\n")
     // console.log(LatLngObj);
     // console.log(markers)
+}
+
+
+function getuserposition(){
+    console.log("위치를 받아옵니다.")
+    // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+    if (navigator.geolocation){
+        // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+        navigator.geolocation.getCurrentPosition(function(position) {    
+            var lat = position.coords.latitude // 위도
+            var lon = position.coords.longitude; // 경도
+            var locPosition = new kakao.maps.LatLng(lat, lon) // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+
+            // 마커와 인포윈도우를 표시합니다
+            displayMarker(locPosition);
+        })
+    }
+    else{ // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+        var center = map.getCenter()
+        var locPosition = new kakao.maps.LatLng(center.getLat(),center.getLng())
+        displayMarker(locPosition);
+    }
+}
+// 지도에 마커와 인포윈도우를 표시하는 함수입니다
+function displayMarker(locPosition) {
+    // 마커를 생성합니다
+    currentposition.setMap(null)
+    // locPosition2 = new kakao.maps.LatLng(map.getCenter().getLat(),map.getCenter().getLng())
+    currentposition = new kakao.maps.Marker({
+        map: map,
+        position: locPosition,
+        image: markerImage
+    })
+    // 지도 중심좌표를 접속위치로 변경합니다
+    map.setCenter(locPosition);      
 }
