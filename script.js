@@ -25,7 +25,7 @@ function closeOverlay() {
 var currentposition = new kakao.maps.Marker({})
 
 // 마커아이콘을 불러오기
-var MARKER_ICON_URL = '/data/img/userpos.png';
+var MARKER_ICON_URL = './data/img/userpos.png';
 var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png'
 var imageSize = new kakao.maps.Size(50,52);
 var imageOption = {offset: new kakao.maps.Point(25,26)}
