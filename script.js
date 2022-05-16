@@ -36,8 +36,9 @@ var geocoder = new kakao.maps.services.Geocoder();
 var LatLngObj= {}
 var counter=0
 var markers=[]
-// var locations [ {"name":"이름1","address":"주소1"}, ... ] in locations.js
+// locations : [ {"name":"이름1","address":"주소1"}, ... ] in locations.js
 // 주소로 좌표를 찾아 LatLngArr에 좌표정보 입력
+var errorflag=0
 
 locations.forEach(function(location){
     geocoder.addressSearch(location.address, function(result, status){
@@ -76,6 +77,7 @@ locations.forEach(function(location){
         else{
             console.log(location.address)
             console.log("!kakao.maps.services.Status.OK ERROR")
+            errorflag=1
         }
         counter++
         // console.log("counter++ : ",counter)
@@ -86,6 +88,9 @@ locations.forEach(function(location){
     })
 })
 function doNext(){
+    if(errorflag==1){
+        alert("카카오 서비스 오류. 관리자에게 연락바람.")
+    }
     console.log("loaded completly\n")
     // console.log(LatLngObj);
     // console.log(markers)

@@ -47,12 +47,13 @@ contact : <alexalex225225@icloud.com>
 >   - ~~City : 서울, 경기, 인천 ...~~     
 > + ~~connect .cvs to "script.js"-{markers[]}~~  
 > + ~~**change API 要請方式**~~   
-> + **add "find my position"**   
+> + ~~**add "find my position"**~~   
 > + ~~update unsupported location data~~    
 > + security update (hide key)   
 > + reconstruct js code so as to make map lighter   
 > + make user comment page. This may help update prichan-informations.   
 > + make page more **pretty**
+> + error handling code   
 > ...   
 > ~~위치 데이터(주소,좌표,.etc)를 로컬에 저장시켜야할듯.<-이용약관 위반인지 확인해야함~~   
 > ~~DB저장불가능...ㅠㅠ 현재(ver.1.10)보다 나은 방식이 없나 찾는중.~~   
@@ -67,6 +68,7 @@ contact : <alexalex225225@icloud.com>
 > ver.1.10 충남, 충북, 강원, 전북, 경남, 전남 위치데이터 추가 (전국의 위치정보 추가완료)   
 > ver.1.11 작동방식 변경. 마커 클릭시 장소명이 팝업, 텍스트 클릭시 해당 장소의 카카오맵으로 이동   
 > ver.1.20 현재위치보기 기능 추가
+> ver.1.21 "이마트 상봉점" 추가
    
 ---
 학교 프로젝트가 안끝나서 손 많이 못대는중ㅠㅠ   
