@@ -1,3 +1,4 @@
+# 안쓰는 파일. 뭐할때쓰던 파일인지 까먹었는데, 나중에 처리할 예정..
 seoul =     "Seoul"
 incheon =   "Incheon"
 gyeonggi =  "Gyeonggi"
